@@ -1,6 +1,6 @@
 var mysql = require(mysql);
 
-function postItem(name, price) {
+var post = function(name, price) {
         connection.query(
           "INSERT INTO auctionItems SET ?", {
             name: name,
@@ -8,4 +8,6 @@ function postItem(name, price) {
         }, function(err, data) {
             if (err) throw err;
         })
-      }
+      };
+      
+module.exports post();
